@@ -12,8 +12,8 @@ export default function Home() {
         {SUB_LINK.map((link, index) => (
           <Link href={link.link} key={index}>
             <div
-              className={`py-3 px-3 grid place-content-center uppercase font-bold ${
-                index < 2 ? "text-primary-200" : "text-secondary-100"
+              className={`py-3 px-3 grid place-content-center uppercase duration-200 font-bold ${
+                index < 2 ? "text-primary-200 hover:text-primary-200" : "text-secondary-100 hover:text-primary-200"
               }`}
             >
               {link.title}

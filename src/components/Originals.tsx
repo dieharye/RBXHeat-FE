@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 export default function Originals() {
+  const gameBoxClass =
+    "border-4 group rounded-2xl border-primary-700 relative aspect-[3/2] overflow-hidden";
+  const imgInClass = "object-cover group-hover:scale-105 duration-200";
   return (
     <div className="">
       <div className="flex gap-10 items-center justify-center py-10">
@@ -15,13 +18,10 @@ export default function Originals() {
         {ORIGINALS.map(
           (item, index) =>
             index < 3 && (
-              <div
-                className="border-4 rounded-2xl border-primary-700 relative aspect-video overflow-hidden"
-                key={index}
-              >
+              <div className={gameBoxClass} key={index}>
                 <Image
                   src={item.image}
-                  className="object-cover"
+                  className={imgInClass}
                   alt={item.title}
                   fill
                 />
@@ -33,13 +33,10 @@ export default function Originals() {
         {ORIGINALS.map(
           (item, index) =>
             index >= 3 && (
-              <div
-                className="border-4 rounded-2xl border-primary-700 relative aspect-[3/2] overflow-hidden"
-                key={index}
-              >
+              <div className={gameBoxClass} key={index}>
                 <Image
                   src={item.image}
-                  className="object-cover"
+                  className={imgInClass}
                   alt={item.title}
                   fill
                 />

@@ -16,8 +16,11 @@ const config: Config = {
         500: "#012169",
         600: "#0C172E",
         700: "#0E1930",
+        800: "#b92219",
       },
+      transparent: "transparent",
       white: "#fff",
+      black: "#000",
       secondary: {
         100: "rgba(163, 191, 224)",
       },
