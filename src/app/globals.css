@@ -7,3 +7,7 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+.modal-open {
+  overflow: hidden;
+}
