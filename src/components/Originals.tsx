@@ -10,7 +10,7 @@ export default function Originals() {
       <div className="flex gap-10 items-center justify-center py-10">
         <div className="h-0.5 bg-gradient-bar w-[calc((100%-375px)/2-60px)]" />
         <span className="uppercase text-4xl font-bold text-primary-200">
-          rbx heat originals
+        Kratox X Fegusion
         </span>
         <div className="h-0.5 bg-gradient-bar w-[calc((100%-375px)/2-60px)] rotate-180" />
       </div>
