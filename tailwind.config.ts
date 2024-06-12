@@ -15,6 +15,7 @@ const config: Config = {
         400: "#0D1830",
         500: "#012169",
         600: "#0C172E",
+        700: "#0E1930",
       },
       white: "#fff",
       secondary: {
@@ -23,7 +24,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-bar":
+          "linear-gradient(90deg, rgba(255, 59, 46, 0.00) 0%, #FF3B2E 100%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
