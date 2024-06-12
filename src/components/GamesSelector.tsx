@@ -11,7 +11,7 @@ export default function GamesSelector() {
           Games selector
           <DownSmIcon />
         </div>
-        <div className="absolute left-0 top-4 pt-6 w-full h-0 group-hover:h-[180px] overflow-hidden duration-300 opacity-0 group-hover:opacity-100">
+        <div className="absolute left-0 top-4 pt-6 w-full h-0 group-hover:h-[240px] overflow-hidden duration-300 opacity-0 group-hover:opacity-100">
           <div className="bg-primary-200 rounded-lg shadow-md duration-300 overflow-hidden">
             <ul className="">
               {LIST.map((item, key) => (
@@ -33,19 +33,23 @@ export default function GamesSelector() {
 
 const LIST = [
   {
-    title: "game 1",
+    title: "Case Battles",
     link: "#",
   },
   {
-    title: "game 2",
+    title: "Cases",
     link: "#",
   },
   {
-    title: "game 3",
+    title: "Blackjack",
     link: "#",
   },
   {
-    title: "game 4",
+    title: "Mines",
+    link: "#",
+  },
+  {
+    title: "Coinflip",
     link: "#",
   },
 ];

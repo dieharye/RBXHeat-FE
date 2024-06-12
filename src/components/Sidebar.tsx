@@ -8,13 +8,18 @@ export default function Sidebar() {
     <div className="w-[360px] h-screen bg-primary-400 sticky top-0">
       <div className="py-7 grid place-content-center">
         <Link href={"/"}>
-          <div className="w-[242px] h-[54px] relative">
-            <Image
-              src="/images/logo.svg"
-              className="object-contain"
-              fill
-              alt=""
-            />
+          <div className="flex items-end justify-center gap-2">
+            <div className="w-[46px] h-[54px] relative">
+              <Image
+                src="/icons/logo@no-text.svg"
+                className="object-contain shadow-lg"
+                fill
+                alt=""
+              />
+            </div>
+            <div className="uppercase inter text-[40px] font-bold text-white leading-[1]">
+              <span className="text-primary-200">RBX</span>HEAT
+            </div>
           </div>
         </Link>
       </div>
