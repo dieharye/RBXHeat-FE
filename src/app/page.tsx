@@ -1,4 +1,7 @@
+import DepositMethod from "@/components/DepositMethod";
+import HomeTabs from "@/components/HomeTabs";
 import Layout from "@/components/Layout";
+import Originals from "@/components/Originals";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,6 +20,17 @@ export default function Home() {
             </div>
           </Link>
         ))}
+      </div>
+      <div className="max-w-[1300px] px-6 mx-auto mt-5">
+        <div className="h-[200px] rounded-2xl bg-primary-400">
+          {
+            // Some content
+          }
+        </div>
+        <Originals />
+        <DepositMethod />
+        <HomeTabs />
+        <div className="h-[300px]" />
       </div>
     </Layout>
   );
