@@ -11,16 +11,17 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  return (
-    <main className="bg-primary-100 flex">
-      <ModalProvider>
-        <Sidebar />
+  return (<>
+    <ModalProvider>
+      <Header />
+      <main className="bg-primary-100 flex">
         <div className="w-[calc(100%-360px)]">
-          <Header />
           {children}
         </div>
         <SigninModal />
-      </ModalProvider>
-    </main>
+        <Sidebar />
+      </main>
+    </ModalProvider>
+  </>
   );
 }

@@ -18,17 +18,24 @@ const config: Config = {
         700: "#0E1930",
         800: "#b92219",
       },
+      blue:{
+        100: "#2E50FF",
+        200: "#0d1a38",
+        500: "#15162D",
+      },
       transparent: "transparent",
       white: "#fff",
       black: "#000",
       secondary: {
         100: "rgba(163, 191, 224)",
+        200: "rgba(143, 170, 220, 0.4)",
+        300: "rgba(41, 40, 67, 0.3)"
       },
     },
     extend: {
       backgroundImage: {
         "gradient-bar":
-          "linear-gradient(90deg, rgba(255, 59, 46, 0.00) 0%, #FF3B2E 100%)",
+          "linear-gradient(90deg, #2E50FF00 0%, #2E50FF 100%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
