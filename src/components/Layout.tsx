@@ -15,7 +15,7 @@ export default function Layout({ children }: LayoutProps) {
     <ModalProvider>
       <Header />
       <main className="bg-primary-100 flex">
-        <div className="w-[calc(100%-360px)]">
+        <div className="xl:w-[calc(100%-360px)] w-full">
           {children}
         </div>
         <SigninModal />
