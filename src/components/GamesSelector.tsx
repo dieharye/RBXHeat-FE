@@ -3,11 +3,14 @@ import { DownIcon, DownSmIcon, GameIcon } from "./SvgIcons";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function GamesSelector() {
+interface SelectorProps{
+  className:string
+}
+export default function GamesSelector({className}:SelectorProps) {
   return (
-    <div className="relative group z-50">
+    <div className={`${className} relative group z-50`}>
       <div className="flex">
-        {LIST.map((item, key) => (
+        {GAME_LIST.map((item, key) => (
           <>
             <Link href={item.link}>
               <div className="px-4 py-2 text-sm captalize text-blue-100 font-bold hover:text-primary-200 duration-200 flex">
@@ -22,7 +25,7 @@ export default function GamesSelector() {
   );
 }
 
-const LIST = [
+export const GAME_LIST = [
   {
     title: "Coinflip",
     image: "/icons/coin.svg",
