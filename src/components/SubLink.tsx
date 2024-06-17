@@ -1,8 +1,10 @@
 import Link from "next/link"
-
-export default function SubLink() {
+interface LinkProps{
+    className:string
+}
+export default function SubLink({className}:LinkProps) {
     return (
-        <div className="bg-primary-600">
+        <div className={`${className} bg-primary-600`}>
             <div className="flex px-4">
                 {SUB_LINK.map((link, index) => (
                     <Link href={link.link} key={index}>
@@ -20,7 +22,7 @@ export default function SubLink() {
 }
 
 
-const SUB_LINK = [
+export const SUB_LINK = [
     {
         title: "redeem code",
         link: "#",

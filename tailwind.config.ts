@@ -36,6 +36,8 @@ const config: Config = {
       backgroundImage: {
         "gradient-bar":
           "linear-gradient(90deg, #2E50FF00 0%, #2E50FF 100%)",
+        "gradient-bar-v":
+          "linear-gradient(0deg, #2E50FF00 0%, #2E50FF 100%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },

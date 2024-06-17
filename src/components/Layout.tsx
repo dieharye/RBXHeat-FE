@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { ModalProvider } from "@/contexts/ModalProvider";
@@ -12,6 +12,26 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const [showChat, toggleChat] = useState(true)
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 1280) {
+        toggleChat(false)
+      } else {
+        toggleChat(true)
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (<>
     <ModalProvider>
       <Header />
@@ -19,9 +39,9 @@ export default function Layout({ children }: LayoutProps) {
         <div className="xl:w-[calc(100%-360px)] w-full duration-200">
           {children}
         </div>
-        <ChatToggleButton />
+        <ChatToggleButton showChat={showChat} onClick={() => { toggleChat((prev) => !prev )}} />
         <SigninModal />
-        <Sidebar />
+        <Sidebar showChat={showChat} />
       </main>
     </ModalProvider>
   </>

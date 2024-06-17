@@ -20,7 +20,7 @@ export default function Game() {
         })
       } else if (width < 768) {
         setTools(() => {
-          const result = new Array(3).fill(1);
+          const result = new Array(2).fill(1);
           return result
         })
       } else {
@@ -41,7 +41,7 @@ export default function Game() {
   }, []);
 
   return (
-    <div className="rounded bg-blue-200 mt-8 py-2 px-8 flex 2xl:flex-row flex-col items-center justify-between border border-solid border-blue-500 overflow-hidden">
+    <div className="rounded bg-gradient-bar-v  mt-8 py-2 px-8 flex 2xl:flex-row flex-col items-center justify-between border border-solid border-blue-100 overflow-hidden">
       <div className="relative h-[90px] w-[110px]">
         <Image src="/images/Frame2131328756.svg" className="absolute bottom-[25px]" width={110} height={60} alt="" />
         <Image src="/images/coin.svg" width={25} height={25} alt="" className="absolute top-[23%] left-[-13px]" />
