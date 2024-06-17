@@ -5,8 +5,7 @@ import ChatBox from "./ChatBox";
 
 export default function Sidebar() {
   return (
-    <div className="w-[360px] h-screen bg-primary-400 sticky top-0">
-      
+    <div className="xl:w-[360px] h-screen bg-primary-400 sticky top-0 hidden xl:block">
       <ChatBox />
       <div className="absolute left-0 bottom-0 w-full p-4">
         <div className="flex items-center justify-between bg-[#08142C] rounded-md">
