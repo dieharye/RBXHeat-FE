@@ -6,7 +6,7 @@ import { ModalProvider } from "@/contexts/ModalProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "🔥RBX HEAT",
+  title: "Collin's Game",
   description: "kratos frontend testing",
   icons: {
     icon: "/favicon.ico",
