@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pumpfun Bundler README
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This is the best, fastest, and most efficient self-bundling script for PumpFun, allowing you to create a token and buy tokens with your own 20 different wallets in one single bundle.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Installation
+
+`
+npm i pumpdotfun-sdk
+`
+
+## Usage Example
+
+First you need to create a `.env` file and set your RPC URL like in the `.env.example`
+
+Then you need to fund an account with atleast 0.004 SOL that is generated when running the command below
+To launch your token on Pumpfun site, edit the metadata as desired.
+```typescript
+    const metadata = {
+      "name": "B@mbi",
+      "symbol": "Bam",
+      "description": "Bambi token",
+      "image": "./upload/img.jpg",
+      "showName": true,
+      "createdOn": "https://pump.fun",
+      "twitter": "https://x.com/bambi",
+      "telegram": "https://t.me/bambi",
+      "website": "https://bambi"
+}
+```
+`
+npx ts-node example/basic/index.ts
+`
+You can check token launch and bundling in this link:
+  - pumpfun site
+    https://pump.fun/2q4JLenwD1cRhzSLu3uPMQPw4fTEYp7bLtfmBwFLb48v
+  - solscan.io
+    ![alt text](image.png)
+
+### PumpDotFunSDK Class
+
+The `PumpDotFunSDK` class provides methods to interact with the PumpFun protocol. Below are the method signatures and their descriptions.
+
+
+#### createAndBuy
+
+```typescript
+async createAndBuy(
+  creator: Keypair,
+  mint: Keypair,
+  createTokenMetadata: CreateTokenMetadata,
+  buyAmountSol: bigint,
+  slippageBasisPoints: bigint = 500n,
+  priorityFees?: PriorityFee,
+  commitment: Commitment = DEFAULT_COMMITMENT,
+  finality: Finality = DEFAULT_FINALITY
+): Promise<TransactionResult>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Creates a new token and buys it.
+- **Parameters**:
+  - `creator`: The keypair of the token creator.
+  - `mint`: The keypair of the mint account.
+  - `createTokenMetadata`: Metadata for the token.
+  - `buyAmountSol`: Amount of SOL to buy.
+  - `slippageBasisPoints`: Slippage in basis points (default: 500).
+  - `priorityFees`: Priority fees (optional).
+  - `commitment`: Commitment level (default: DEFAULT_COMMITMENT).
+  - `finality`: Finality level (default: DEFAULT_FINALITY).
+- **Returns**: A promise that resolves to a `TransactionResult`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Running the Examples
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Basic Example
 
-## Learn More
+To run the basic example for creating, buying, and selling tokens, use the following command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx ts-node example/basic/index.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We welcome contributions! Please submit a pull request or open an issue to discuss any changes.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Pumpfun bundler V2
+
+### I made pumpfun bundler version 2 ###
+Create and buy with 20 wallets in a single bundle
+Example:
+https://explorer.jito.wtf/bundle/28d842bef7c919cee00798cee05bb15616bdf96574a8428a27b81c71252342e0
