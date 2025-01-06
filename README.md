@@ -18,15 +18,15 @@ Then you need to fund an account with atleast 0.004 SOL that is generated when r
 To launch your token on Pumpfun site, edit the metadata as desired.
 ```typescript
     const metadata = {
-      "name": "B@mbi",
-      "symbol": "Bam",
-      "description": "Bambi token",
+      "name": "Example",
+      "symbol": "exm",
+      "description": "This is an example pumpfun token",
       "image": "./upload/img.jpg",
       "showName": true,
       "createdOn": "https://pump.fun",
-      "twitter": "https://x.com/bambi",
-      "telegram": "https://t.me/bambi",
-      "website": "https://bambi"
+      "twitter": "https://x.com/***",
+      "telegram": "https://t.me/***",
+      "website": "https://***"
 }
 ```
 `
